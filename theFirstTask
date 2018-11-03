@@ -1,1 +1,17 @@
-New file
+var obj = {
+  name:'object',
+  age:1,
+  key:'property'
+  };
+var copy = JSON.parse(JSON.stringify(obj));
+
+console.log(obj);
+console.log(copy);
+
+copy.name = 'object2';
+
+console.log(obj);
+console.log(copy);
+
+/*Сделал копирование при помощи перевода кода в строку и обратно. Понятно, что у этого метода есть недостатки, но если объект будет не
+цикличен, то это самый легкий и понятный способ создать копию я думаю.*/
